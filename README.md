@@ -139,12 +139,12 @@ def test_output(output, *args) -> None:
 
 ## demo steps
 
-- [*] local postgres running  
-- [*] connect pgadmin to local postgres (for host use ip `hostname -I`)
-- [*] files in github repo
-- [*] load: load file and assert is not null
-- [*] transform: use a datascratch to show df.info(), remove null rows, create is delayed flag, create is overbooked flag
-- [*] export: dump to local postgres
+- [x] local postgres running  
+- [x] connect pgadmin to local postgres (for host use ip `hostname -I`)
+- [x] files in github repo
+- [x] load: load file and assert is not null
+- [x] transform: use a datascratch to show df.info(), remove null rows, create is delayed flag, create is overbooked flag
+- [x] export: dump to local postgres
 
 ### alternatively
 
