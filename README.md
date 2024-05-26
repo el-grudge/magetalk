@@ -1,22 +1,5 @@
 # magetalk
 
-## demo steps
-
-- [ ] local postgres running  
-- [ ] connect pgadmin to local postgres (for host use ip `hostname -I`)
-- [ ] files in google storage (maybe upload to github instead for an elt pipelin)
-- [ ] load: load file and assert is not null
-- [ ] transform: use a datascratch to show df.info(), remove null rows, create is delayed flag, create is overbooked flag
-- [ ] export: dump to local postgres
-
-### alternatively
-
-- [ ] extract from api (github)
-- [ ] dump to gcs
-- [ ] transform - same
-- [ ] export to postgres
-
-
 ## prerequisites
 
 ### install docker
@@ -152,3 +135,23 @@ def test_output(output, *args) -> None:
 
 ### data exporter
 - load to postgres, and set if_exists = 'merge'
+
+
+## demo steps
+
+- [*] local postgres running  
+- [*] connect pgadmin to local postgres (for host use ip `hostname -I`)
+- [*] files in github repo
+- [*] load: load file and assert is not null
+- [*] transform: use a datascratch to show df.info(), remove null rows, create is delayed flag, create is overbooked flag
+- [*] export: dump to local postgres
+
+### alternatively
+
+- [ ] load from api (github)
+- [ ] transform - type cast, add columns, take care of nulls
+- [ ] export to gcs as parquet
+- [ ] extract from parquet
+- [ ] export to postgres
+
+
