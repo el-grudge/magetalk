@@ -34,8 +34,8 @@ docker run hello-world
 ### Docker compose
 Follow the instructions in this [link](https://docs.docker.com/compose/install/), or run the following commands
 ```bash
-wget https://github.com/docker/compose/releases/download/v2.24.3/docker-compose-linux-x86_64 -O /usr/bin/docker-compose
-chmod +x /usr/bin/docker-compose 
+sudo wget https://github.com/docker/compose/releases/download/v2.24.3/docker-compose-linux-x86_64 -O /usr/bin/docker-compose
+sudo chmod +x /usr/bin/docker-compose 
 which docker-compose 
 ```
 
@@ -54,7 +54,7 @@ sudo systemctl start postgresql
 sudo systemctl enable postgresql
 ```
 ```bash
-sudo sed -i "s/^# listen_addresses = 'localhost'/listen_addresses = '*'/g" /etc/postgresql/16/main/postgresql.conf
+sudo sed -i "s/^#listen_addresses = 'localhost'/listen_addresses = '*'/g" /etc/postgresql/16/main/postgresql.conf
 sudo sed -i '/^host/s/ident/md5/' /etc/postgresql/16/main/pg_hba.conf
 sudo sed -i '/^local/s/peer/trust/' /etc/postgresql/16/main/pg_hba.conf
 echo "host all all 0.0.0.0/0 md5" | sudo tee -a /etc/postgresql/16/main/pg_hba.conf
